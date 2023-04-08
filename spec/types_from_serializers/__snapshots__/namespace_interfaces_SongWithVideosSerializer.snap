@@ -4,10 +4,14 @@
 import type { Composer } from './Composer'
 import type { Video } from './Video'
 
-export interface SongWithVideos {
-  id: number
-  composer: Composer
-  title?: string
-  videos: Video[]
+namespace global {
+  declare namespace Schema {
+    export interface SongWithVideos {
+      id: number
+      composer: Composer
+      title?: string
+      videos: Video[]
+    }
+  }
 }
 
