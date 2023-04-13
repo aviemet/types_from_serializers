@@ -18,16 +18,16 @@ describe "Generator" do
     ]
   }
 
-  def file_for(dir, name, extension = ".ts")
-    dir.join("#{name.chomp("Serializer").gsub("::", "/")}#{extension}")
+  def file_for(dir, name)
+    dir.join("#{name.chomp("Serializer").gsub("::", "/")}.ts")
   end
 
-  def app_file_for(name, extension = nil)
-    file_for(sample_dir, name, extension)
+  def app_file_for(name)
+    file_for(sample_dir, name)
   end
 
-  def output_file_for(name, extension = nil)
-    file_for(output_dir, name, extension)
+  def output_file_for(name)
+    file_for(output_dir, name)
   end
 
   def expect_generator
